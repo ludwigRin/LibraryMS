@@ -2,6 +2,7 @@ class Book {
     String title;
     String author;
     boolean available;
+    Library library;
 
     // constructor
     public Book(String title, String author, boolean available) {
@@ -19,6 +20,9 @@ class Book {
     }
     public void setAvailability(boolean available) {
         this.available = available;
+    }
+    public void setLibrary(Library library) {
+        this.library = library;
     }
 
     // getter
