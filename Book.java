@@ -35,6 +35,7 @@ class Book {
     public boolean getAvailability() {
         return this.available;
     }
-
-    
+    public Library getLibrary() {
+        return this.library;
+    }
 }

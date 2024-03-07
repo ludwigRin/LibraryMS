@@ -10,17 +10,20 @@ public class Library {
     
 
     public void addBook(Book book) {
-        if (book.getAvailability()) {
-            book.setLibrary(this);
-        }
+        book.setLibrary(this);
         this.books.add(book);
-        book.setAvailability(false);
+        book.setAvailability(true);
     }
     public ArrayList<Book> displayBooks() {
         return books;
     }
 
-
-
+    public void rentBook(Book book) {
+        if (book.getAvailability()) {
+            book.setAvailability(false);
+        }
+    }
+    public void returnBook(Book book) {
+        book.setAvailability(true);
+    }
 }
-
