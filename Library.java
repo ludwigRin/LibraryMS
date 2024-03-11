@@ -14,16 +14,38 @@ public class Library {
         this.books.add(book);
         book.setAvailability(true);
     }
-    public ArrayList<Book> displayBooks() {
-        return books;
-    }
-
-    public void rentBook(Book book) {
-        if (book.getAvailability()) {
-            book.setAvailability(false);
+    public void displayBooks() {
+        for (Book i : books) {
+            if (i.getAvailability()) {
+                System.out.println(i.getTitle() + " by " + i.getAuthor() + " - available"); 
+            }
+            else {
+                System.out.println(i.getTitle() + " by " + i.getAuthor() + " - currently not available");
+            }
         }
     }
-    public void returnBook(Book book) {
-        book.setAvailability(true);
-    }
+
+    public void rentBook(String title, String author) {
+        for (Book book : books) {
+            if (book.getTitle().equals(title) && book.getAuthor().equals(author)) {
+                if (book.getAvailability()) {
+                    book.setAvailability(false);
+                    System.out.println("You've rented " + title + " by " + author);
+                }
+            }
+        }
+
+        }
+    
+        public void returnBook(String title, String author) {
+            for (Book book : books) {
+                if (book.getTitle().equals(title) && book.getAuthor().equals(author)) {
+                    if (!book.getAvailability()) {
+                        book.setAvailability(true);
+                        System.out.println("You've returned " + title + " by " + author);
+                    }
+                }
+            }
+    
+            }
 }
