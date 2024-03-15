@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
 public class Main {
-    
-
 
     public static void main(String[] args) {
         Library lib = new Library();
@@ -24,7 +22,7 @@ public class Main {
             int choice = in.nextInt();
             in.nextLine();
 
-            switch(choice) {
+            switch (choice) {
                 case 1:
                     System.out.print("Please enter the Title: ");
                     String title = in.nextLine();
@@ -50,15 +48,11 @@ public class Main {
                     String author2 = in.nextLine();
                     System.out.println("You returned" + title2 + " by " + author2);
                     lib.rentBook(title2, author2);
-                    break; 
+                    break;
                 case 0:
                     on = false;
             }
-        }
-        while (on);
-    
-
-
-
+        } while (on);
+        in.close();
     }
 }
