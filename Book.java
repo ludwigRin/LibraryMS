@@ -1,8 +1,8 @@
 class Book {
-    String title;
-    String author;
-    boolean available;
-    Library library;
+    private String title;
+    private String author;
+    private boolean available;
+    private Library library;
 
     // constructor
     public Book(String title, String author) {

@@ -15,6 +15,7 @@ public class Main {
             System.out.println("4. Return a book");
             System.out.println("0. Exit");
             System.out.print("Please enter your choice: ");
+            
             while (!in.hasNextInt()) {
                 System.out.println("Invalid input. Please enter an integer.");
                 in.next();
@@ -47,7 +48,7 @@ public class Main {
                     System.out.print("Enter the Author of the Book you want to return: ");
                     String author2 = in.nextLine();
                     System.out.println("You returned" + title2 + " by " + author2);
-                    lib.rentBook(title2, author2);
+                    lib.returnBook(title2, author2);
                     break;
                 case 0:
                     on = false;
